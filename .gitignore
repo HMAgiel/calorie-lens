@@ -1,0 +1,8 @@
+#environment
+.venv
+.env
+
+#data
+data/
+*.zip
+Calory.v1i.yolov12.zip:Zone.Identifier
