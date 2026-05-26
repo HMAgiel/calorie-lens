@@ -1,9 +1,13 @@
 from ultralytics import YOLO
 import cv2
 import tempfile
+import os
+from openai import OpenAI
+from dotenv import load_dotenv
 
+load_dotenv()
 model = YOLO("/home/hasyim/projects-ai-engineer/Capston4/best_calories.pt")
-
+client = OpenAI()
 
 def claories_detection(img):
     food = []
@@ -37,3 +41,11 @@ def claories_detection(img):
         food_det.append(picture_food)
     return food_det, ", ".join(food)
 
+def summary(label):
+    response = client.responses.create(
+        model="gpt-4o-mini",
+        instructions="Kamu adalah ahli gizi yang membantu user dalam hal pemenuhan kalori dari makanan-makanan user, Taruh jumlah kalori paling atas dari gabungan  makanan user ,beri ringkasan singkat maksimal 3 paragraf",
+        input=f"Berikut adalah makanan yang saya makan {label}",
+        max_output_tokens=150
+    )
+    return response.output_text
