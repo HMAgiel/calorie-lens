@@ -14,8 +14,12 @@ gambar = sl.file_uploader(
 
 if sl.button("Detect"):
         pic, label= claories_detection(gambar)
-        sl.image(pic, channels="BGR")
-        print(pic)
+        col = sl.columns(len(pic), gap="small")
+        for i in range(len(pic)):
+            with col[i]:
+                sl.image(pic[i], channels='BGR')
+        # sl.image(pic, channels="BGR", use_column_width=True)
+        # print(pic)
         sl.text("JumaH kalori yang terdeteksi adalah:")
         # print(label)
         sl.text(label)
