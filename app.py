@@ -6,16 +6,16 @@ sl.markdown("---")
 gambar = sl.file_uploader(
     label="Upload Gambar makanan",
     type=['png', 'jpg'],
-    accept_multiple_files=False
+    accept_multiple_files=True
 )
 
-
 # if sl.button("coba"):
-#     print(gambar.name)
+#      print(gambar[0].name)
 
 if sl.button("Detect"):
         pic, label= claories_detection(gambar)
         sl.image(pic, channels="BGR")
+        print(pic)
         sl.text("JumaH kalori yang terdeteksi adalah:")
         # print(label)
         sl.text(label)
