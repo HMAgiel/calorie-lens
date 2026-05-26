@@ -9,9 +9,13 @@ gambar = sl.file_uploader(
     accept_multiple_files=False
 )
 
+
+# if sl.button("coba"):
+#     print(gambar.name)
+
 if sl.button("Detect"):
-        detect = claories_detection(gambar)
-        index = detect[0].boxes.cls
-        sl.image(detect[0].plot(), channels="BGR")
+        pic, label= claories_detection(gambar)
+        sl.image(pic, channels="BGR")
         sl.text("JumaH kalori yang terdeteksi adalah:")
-        sl.text(detect[0].names[int(index)])
+        # print(label)
+        sl.text(label)
