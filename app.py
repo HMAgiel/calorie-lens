@@ -1,4 +1,5 @@
 import streamlit as sl
+from datetime import datetime, timezone, timedelta
 from detection import claories_detection, summary, video_detc
 sl.title("Uploaad file")
 sl.markdown("---")
@@ -40,6 +41,11 @@ if sl.button("Detect"):
         label_vid = " "
     
     food = label_pic + label_vid
+    time_zone = timezone(timedelta(hours=7))
+    time = datetime.now(time_zone)
+    waktu = time.strftime("%H:%M")
+    
     with sl.spinner("Summarize results...", show_time=True):
-        summ = summary(food)
+        summ = summary(food, waktu)
+    sl.text(f"Sekarang pukul: {waktu}")
     sl.markdown(summ)

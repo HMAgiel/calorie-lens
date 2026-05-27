@@ -78,16 +78,17 @@ def video_detc(vid, pengganti):
     return foods
 
 
-def summary(makanan):
+def summary(makanan, waktu):
     response = client.responses.create(
         model="gpt-4o-mini",
         instructions="""
         Kamu adalah ahli gizi yang membantu user dalam hal pemenuhan kalori dari makanan-makanan user.
-        Taruh jumlah kalori paling atas dari gabungan makanan user. 
+        Taruh jumlah kalori paling atas dari gabungan makanan user.
+        klasifikasikan apakah itu untuk makan pagi, siang atau malam berdasarkan waktu.
         beri ringkasan singkat maksimal 3 paragraf.
         Ringkasan tidak perlu satu maknana 1 paragraf bisa digabungkan.
         Gunakan emoji agar terlihat kebih friendly
         """,
-        input=f"Berikut adalah makanan yang saya makan {makanan}",
+        input=f"""Berikut adalah makanan yang saya makan di jam {waktu} adalah: {makanan}""",
     )
     return response.output_text
