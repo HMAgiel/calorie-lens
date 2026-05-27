@@ -1,4 +1,4 @@
-# 🍱 CaloriVision — AI-Powered Food Calorie Detection
+# 🍱 calorie-lens — AI-Powered Food Calorie Detection
 
 > **Detect. Analyze. Understand.** — A real-time food recognition system powered by YOLO26n and GPT-4o, delivering instant calorie insights from images and videos.
 
@@ -6,9 +6,9 @@
 
 ## 🌟 Overview
 
-**CaloriVision** is an end-to-end AI pipeline that identifies food items from images or video streams and generates intelligent, context-aware nutritional summaries. Built on a custom-trained YOLO26n object detection model and augmented with GPT-4o-mini's reasoning capabilities, it bridges computer vision and natural language to make nutrition tracking intuitive and accessible.
+**calorie-lens** is an end-to-end AI pipeline that identifies food items from images or video streams and generates intelligent, context-aware nutritional summaries. Built on a custom-trained YOLO26n object detection model and augmented with GPT-4o-mini's reasoning capabilities, it bridges computer vision and natural language to make nutrition tracking intuitive and accessible.
 
-Whether you're a health-conscious user, a dietitian, or a developer exploring AI in food tech — CaloriVision delivers accurate, beautiful, and human-friendly results.
+Whether you're a health-conscious user, a dietitian, or a developer exploring AI in food tech — calorie-lens delivers accurate, beautiful, and human-friendly results.
 
 ---
 
@@ -88,8 +88,8 @@ patience    = 5          # Early stopping
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/calorivision.git
-cd calorivision
+git clone https://github.com/your-username/calorie-lens.git
+cd calorie-lens
 
 # Install dependencies
 pip install ultralytics streamlit openai opencv-python python-dotenv albumentations
@@ -134,7 +134,7 @@ Navigate to `http://localhost:8501` in your browser.
 ## 📁 Project Structure
 
 ```
-calorivision/
+calorie-lens/
 ├── app.py              # Streamlit UI & app orchestration
 ├── detection.py        # YOLO inference + GPT summary logic
 ├── training.py         # Model training script

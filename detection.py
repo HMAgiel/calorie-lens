@@ -7,7 +7,7 @@ from openai import OpenAI
 from dotenv import load_dotenv
 
 load_dotenv()
-model = YOLO("/home/hasyim/projects-ai-engineer/Capston4/best_calories.pt")
+model = YOLO("best_calories.pt")
 client = OpenAI()
 
 
