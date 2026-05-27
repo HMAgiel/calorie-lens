@@ -6,7 +6,7 @@ sl.markdown("---")
 
 gambar = sl.file_uploader(
     label="Upload Gambar makanan",
-    type=['png', 'jpg'],
+    type=['png', 'jpg', 'webp'],
     accept_multiple_files=True
 )
 
@@ -22,7 +22,9 @@ vi =  sl.file_uploader(
 #         sl.text(hasil)
         
 if sl.button("Detect"):
-    if gambar is not None:
+    print(gambar)
+    print(vi)
+    if gambar != []:
         with sl.spinner("Picture detetction progress...", show_time=True):
             pic, label_pic = claories_detection(gambar)
             col = sl.columns(len(pic), gap="small")
@@ -38,6 +40,7 @@ if sl.button("Detect"):
         with sl.spinner("Video Detetection in progress....", show_time=True):
             label_vid = video_detc(vi, placeholder)
             sl.success("Success detecting video")
+            
     else:
         label_vid = " "
     
