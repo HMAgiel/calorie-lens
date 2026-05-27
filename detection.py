@@ -3,14 +3,14 @@ import cv2
 import tempfile
 import os
 import numpy as np
+import streamlit as st
 from openai import OpenAI
 from dotenv import load_dotenv
 
 load_dotenv()
 model = YOLO("best_calories.pt")
+os.environ["OPENAI_API_KEY"] == st.secrets["OPENAI_API_KEY"]
 client = OpenAI()
-
-
     
 def claories_detection(img):
     food = []
