@@ -173,8 +173,6 @@ nvidia-nvshmem-cu13==3.4.5 ; sys_platform == 'linux'
     # via torch
 nvidia-nvtx==13.0.85 ; sys_platform == 'linux'
     # via cuda-toolkit
-opencv-python==4.13.0.92
-    # via ultralytics
 opencv-python-headless==4.13.0.92
     # via
     #   albucore
