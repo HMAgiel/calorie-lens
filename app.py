@@ -14,12 +14,7 @@ vi =  sl.file_uploader(
     "Upload Video (only one video)", 
     type='mp4', 
     accept_multiple_files=False)
-# if sl.button("Upload Video (Only one)"):
-#     placeholder = sl.empty()
-#     with sl.spinner("Wait in progress....", show_time=True):
-#         hasil = video_detc(vi, placeholder)
-#         sl.success("Berhasil deteksi")
-#         sl.text(hasil)
+
         
 if sl.button("Detect"):
     print(gambar)
@@ -48,14 +43,3 @@ if sl.button("Detect"):
     with sl.spinner("Summarize results...", show_time=True):
         summ = summary(food)
     sl.markdown(summ)
-    
-
-# if sl.button("Detect"):
-#     pic, label= claories_detection(gambar)
-#     summ = summary(label)
-#     col = sl.columns(len(pic), gap="small")
-#     for i in range(len(pic)):
-#         with col[i]:
-#             sl.image(pic[i], channels='BGR')
-#     sl.text("Summary")
-#     sl.text(summ)
