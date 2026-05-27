@@ -6,18 +6,18 @@ sl.markdown("---")
 
 
 gambar = sl.file_uploader(
-    label="Upload Gambar makanan",
+    label="Upload Food Image",
     type=['png', 'jpg', 'webp'],
     accept_multiple_files=True
 )
 
+sl.markdown("---")
 vi =  sl.file_uploader(
-    "Upload Video (only one video)", 
+    "Upload Food Video (only one video)", 
     type='mp4', 
     accept_multiple_files=False)
-
-        
-if sl.button("Detect"):
+      
+if sl.button("Detect the food calories"):
     print(gambar)
     print(vi)
     if gambar != []:
@@ -47,5 +47,5 @@ if sl.button("Detect"):
     
     with sl.spinner("Summarize results...", show_time=True):
         summ = summary(food, waktu)
-    sl.text(f"Sekarang pukul: {waktu}")
+    sl.text(f"Time: {waktu} WIB")
     sl.markdown(summ)
