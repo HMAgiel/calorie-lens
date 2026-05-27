@@ -9,8 +9,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 model = YOLO("best_calories.pt")
-os.environ["OPENAI_API_KEY"] == st.secrets["OPENAI_API_KEY"]
-client = OpenAI()
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
     
 def claories_detection(img):
     food = []
