@@ -1,6 +1,9 @@
 #environment
 .venv
 .env
+__pycache__/
+__results___files
+
 
 #data
 data/
