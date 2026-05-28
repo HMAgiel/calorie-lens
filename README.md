@@ -1,7 +1,7 @@
 # 🍱 calorie-lens — AI-Powered Food Calorie Detection
 
 > **Detect. Analyze. Understand.** — A real-time food recognition system powered by YOLO26n and GPT-4o, delivering instant calorie insights from images and videos.
-Streamlit link: [Streamlit/Caroli-Lens]()
+Streamlit link: [Streamlit/Caroli-Lens](https://calorie-lens-apps.streamlit.app/)
 
 ---
 
