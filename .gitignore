@@ -3,7 +3,7 @@
 .env
 __pycache__/
 __results___files
-
+runs/
 
 #data
 data/
