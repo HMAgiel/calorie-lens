@@ -1,6 +1,6 @@
 import streamlit as sl
 from datetime import datetime, timezone, timedelta
-from detection import claories_detection, video_detc, summary
+from src.detection import claories_detection, video_detc, summary
 sl.title("Uploaad file")
 sl.markdown("---")
 

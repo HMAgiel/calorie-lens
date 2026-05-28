@@ -8,7 +8,7 @@ from openai import OpenAI
 from dotenv import load_dotenv
 
 load_dotenv()
-model = YOLO("best_calories.pt")
+model = YOLO("model/best_calories.pt")
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
     
 def claories_detection(img):
