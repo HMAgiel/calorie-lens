@@ -60,17 +60,17 @@ Whether you're a health-conscious user, a dietitian, or a developer exploring AI
 The detection model is a **YOLO26n** variant fine-tuned on a custom Indonesian food dataset, trained with the following configuration:
 
 ```python
-epochs      = 100
+epochs      = 300
 batch       = 22
 imgsz       = 640
 device      = [0, 1]     # Multi-GPU training
-patience    = 5          # Early stopping
+patience    = 50          # Early stopping
 ```
 
 **Augmentation strategy applied during training:**
 - HSV color jitter (`hsv_h=0.4`, `hsv_s=0.6`, `hsv_v=0.5`) for lighting robustness
-- Mosaic augmentation (`0.5`) for multi-object scene generalization
-- Random erasing (`0.4`) to improve occlusion handling
+- Mosaic augmentation (`0.7`) for multi-object scene generalization
+- Random erasing (`0.6`) to improve occlusion handling
 - RandAugment policy for diverse training-time transformations
 
 > Training logs are persisted to `training_yolo.log` with timestamped entries and human-readable duration reporting.
