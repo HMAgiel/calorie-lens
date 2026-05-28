@@ -1,6 +1,7 @@
 # 🍱 calorie-lens — AI-Powered Food Calorie Detection
 
 > **Detect. Analyze. Understand.** — A real-time food recognition system powered by YOLO26n and GPT-4o, delivering instant calorie insights from images and videos.
+Streamlit link: [Streamlit/Caroli-Lens]()
 
 ---
 
@@ -135,12 +136,22 @@ Navigate to `http://localhost:8501` in your browser.
 
 ```
 calorie-lens/
-├── app.py              # Streamlit UI & app orchestration
-├── detection.py        # YOLO inference + GPT summary logic
-├── training.py         # Model training script
-├── best_calories.pt    # Custom-trained YOLOv8 weights
-├── .env                # API keys (not committed)
-└── training_yolo.log   # Auto-generated training log
+├── src/
+│   ├── __init__.py
+│   └── detection.py        # YOLO inference + GPT summary logic
+├── utils/
+│   └── training.py         # Model training script
+├── model/
+│   └── best_calories.pt    # Custom-trained YOLOv8 weights
+├── logs/
+│   └── training_yolo.log   # Auto-generated training log
+├── runs/                   # YOLO training output (auto-generated)
+├── app.py                  # Streamlit UI & app orchestration
+├── packages.txt            # Streamlit Cloud system dependencies
+├── requirements.txt        # Python dependencies
+├── pyproject.toml          # Project metadata
+├── .env                    # API keys (not committed)
+└── .gitignore
 ```
 ---
 
